@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/lib/python3.12/http/server.py", line 1314, in <module>
+    test(
+  File "/usr/lib/python3.12/http/server.py", line 1261, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 1308, in server_bind
+    return super().server_bind()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [25/Nov/2024 21:00:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2024 21:00:01] code 404, message File not found
+127.0.0.1 - - [25/Nov/2024 21:00:01] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [25/Nov/2024 21:22:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2024 21:22:02] code 404, message File not found
+127.0.0.1 - - [25/Nov/2024 21:22:02] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [25/Nov/2024 21:22:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2024 21:22:30] code 404, message File not found
+127.0.0.1 - - [25/Nov/2024 21:22:30] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [26/Nov/2024 10:11:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Nov/2024 10:11:43] code 404, message File not found
+127.0.0.1 - - [26/Nov/2024 10:11:43] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [26/Nov/2024 10:13:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Nov/2024 10:13:19] code 404, message File not found
+127.0.0.1 - - [26/Nov/2024 10:13:19] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [26/Nov/2024 10:14:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Nov/2024 10:14:28] code 404, message File not found
+127.0.0.1 - - [26/Nov/2024 10:14:28] "GET /favicon.ico HTTP/1.1" 404 -

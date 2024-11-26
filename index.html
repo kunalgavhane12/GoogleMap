@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #map {
+            width: 100%;
+            height: 450px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+        .info {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Include Google Maps API -->
+    <script src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyuMKh51TxhNkoy6nlSDCcX3p_QWLhGD0Sf&libraries=geometry,places&callback=initMap" async defer onerror="handleMapError()"></script>
+      <script>
+        // Initialize the Google Map
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 17.3981, lng: 78.4706 }, // Default coordinates
+                zoom: 14, // Default zoom level
+            });
+
+            // Add a marker as an example
+            const marker = new google.maps.Marker({
+                position: { lat: 17.3981, lng: 78.4706 },
+                map: map,
+                title: "Default Location",
+            });
+        }
+
+        // Handle errors in loading the map
+        function handleMapError() {
+            alert("Failed to load the Google Maps API. Check your internet connection or API key.");
+        }
+    </script>
+</body>
+</html>
+
